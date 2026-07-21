@@ -143,4 +143,893 @@
 
     .login-area {
       display: flex;
-      align
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      color: var(--text);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    }
+
+    .login-card {
+      width: 465px;
+      padding: 38px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 0 24px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 13px;
+      font-size: 14px;
+      outline: none;
+      background: white;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(10,91,216,0.12);
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--border);
+    }
+
+    .btn-full {
+      width: 100%;
+      padding: 14px;
+    }
+
+    .mock-switcher {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      border-radius: 16px;
+      padding: 9px;
+    }
+
+    .mock-switcher button {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .mock-switcher button.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .admin-app {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: calc(100vh - 68px);
+      background: #f3f6fb;
+    }
+
+    .sidebar {
+      background: var(--navy);
+      color: white;
+      padding: 24px 17px;
+    }
+
+    .side-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .side-logo-title {
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    .side-logo-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .side-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 14px;
+      border-radius: 12px;
+      margin-bottom: 7px;
+      color: rgba(255,255,255,0.88);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .side-item.active {
+      background: var(--blue);
+      color: white;
+    }
+
+    .admin-main {
+      padding: 30px;
+    }
+
+    .page-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .page-heading h2 {
+      font-size: 30px;
+      margin: 0 0 6px;
+    }
+
+    .page-heading p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .grid-upload {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 22px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .upload-drop {
+      min-height: 282px;
+      border: 2px dashed #9ec5ff;
+      background: #f1f7ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+    }
+
+    .upload-icon {
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
+
+    .upload-large {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .upload-help {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .setting-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      background: #f1f4f9;
+      color: #374151;
+      padding: 13px;
+      font-weight: 800;
+    }
+
+    td {
+      border-top: 1px solid var(--border);
+      padding: 13px;
+      color: #374151;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .customer-login-layout {
+      min-height: calc(100vh - 68px);
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      align-items: center;
+      padding: 55px 70px;
+      gap: 45px;
+    }
+
+    .customer-copy h1 {
+      color: var(--blue);
+      font-size: 44px;
+      line-height: 1.16;
+      margin: 0 0 20px;
+      letter-spacing: -0.7px;
+    }
+
+    .customer-copy p {
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 0 0 28px;
+    }
+
+    .customer-points {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .customer-point {
+      background: white;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      padding: 9px 14px;
+    }
+
+    .customer-card {
+      max-width: 470px;
+      padding: 38px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .auth-title {
+      font-size: 25px;
+      font-weight: 800;
+      margin: 0 0 11px;
+    }
+
+    .auth-desc {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .no-password {
+      text-align: center;
+      margin-top: 17px;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .customer-app {
+      min-height: calc(100vh - 68px);
+      background: white;
+      padding: 28px 34px 80px;
+    }
+
+    .customer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-item {
+      padding: 0 0 16px;
+      font-size: 14px;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .nav-item.active {
+      color: var(--blue);
+      border-bottom: 3px solid var(--blue);
+    }
+
+    .report-title h2 {
+      margin: 0 0 6px;
+      font-size: 30px;
+    }
+
+    .report-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .filter-row {
+      display: grid;
+      grid-template-columns: 210px 210px 1fr 90px;
+      gap: 12px;
+      align-items: center;
+      margin: 24px 0;
+    }
+
+    .file-badge {
+      display: inline-block;
+      min-width: 35px;
+      text-align: center;
+      color: white;
+      border-radius: 5px;
+      padding: 4px 6px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .file-pdf {
+      background: var(--red);
+    }
+
+    .file-xls {
+      background: var(--green);
+    }
+
+    .download-btn {
+      background: #eef6ff;
+      color: var(--blue);
+      border: 1px solid #cfe6ff;
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .notice {
+      margin-top: 24px;
+      background: #eff7ff;
+      border: 1px solid #cfe6ff;
+      color: #475569;
+      border-radius: 16px;
+      padding: 17px 20px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .toast {
+      position: fixed;
+      top: 86px;
+      right: 24px;
+      background: #111827;
+      color: white;
+      border-radius: 12px;
+      padding: 13px 18px;
+      font-size: 13px;
+      display: none;
+      z-index: 20;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+    }
+
+    @media (max-width: 980px) {
+      .admin-login-layout,
+      .customer-login-layout,
+      .admin-app,
+      .grid-upload,
+      .filter-row {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      header {
+        padding: 0 18px;
+      }
+
+      .powered {
+        display: none;
+      }
+
+      .mock-switcher {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="mainHeader">
+    <div class="brand">
+      <div class="brand-main">MMP</div>
+      <div class="brand-sub">Mobility Management Portal</div>
+    </div>
+    <div class="powered">
+      <span>Powered by ORIX Auto</span>
+      <span class="orix-logo"><span class="orix-mark"></span>ORIX AUTO</span>
+    </div>
+  </header>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- 管理者ログイン -->
+  <section id="adminLogin" class="screen active admin-bg">
+    <div class="admin-login-layout">
+      <div class="admin-hero">
+        <div class="eyebrow">モビリティ情報を、もっとスマートに。</div>
+        <h1>Mobility<br>Management Portal</h1>
+        <p>管理者向けポータル</p>
+        <div class="security-note">● 安全な環境で顧客向けレポートを管理します</div>
+      </div>
+
+      <div class="login-area">
+        <div class="card login-card">
+          <h2 class="card-title">管理者ログイン</h2>
+
+          <div class="field">
+            <label>メールアドレス</label>
+            <input type="text" placeholder="メールアドレスを入力してください" />
+          </div>
+
+          <div class="field">
+            <label>パスワード</label>
+            <input type="password" placeholder="パスワードを入力してください" />
+          </div>
+
+          <div class="field">
+            <label style="font-weight:500;">
+              <input type="checkbox" style="width:auto; margin-right:6px;" />
+              ログイン状態を保持する
+            </label>
+          </div>
+
+          <button class="btn btn-navy btn-full" onclick="showScreen('adminUpload')">ログイン</button>
+
+          <div style="margin-top:18px; text-align:center; font-size:13px; color:#0a5bd8;">
+            パスワードをお忘れの方はこちら
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- レポートアップロード -->
+  <section id="adminUpload" class="screen">
+    <div class="admin-app">
+      <aside class="sidebar">
+        <div class="side-logo">
+          <span class="orix-mark"></span>
+          <div>
+            <div class="side-logo-title">MMP</div>
+            <div class="side-logo-sub">Administration</div>
+          </div>
+        </div>
+
+        <div class="side-item">🏠 ダッシュボード</div>
+        <div class="side-item">📄 レポート管理</div>
+        <div class="side-item active">☁ レポートアップロード</div>
+        <div class="side-item">👥 顧客管理</div>
+        <div class="side-item">🕘 アクセス履歴</div>
+        <div class="side-item">⚙ 設定</div>
+      </aside>
+
+      <main class="admin-main">
+        <div class="page-heading">
+          <div>
+            <h2>レポートアップロード</h2>
+            <p>顧客に提供するレポートファイルをアップロードしてください。</p>
+          </div>
+          <button class="btn btn-light" onclick="showScreen('adminLogin')">ログアウト</button>
+        </div>
+
+        <div class="grid-upload">
+          <div class="panel">
+            <div class="upload-drop" onclick="showToast('モックのため実ファイルは保存されません。')">
+              <div>
+                <div class="upload-icon">☁</div>
+                <div class="upload-large">ファイルをドラッグ＆ドロップ</div>
+                <div style="color:#6b7280;">または</div>
+                <div style="margin-top:8px; color:#0a5bd8; font-weight:800; text-decoration:underline;">
+                  ファイルを選択
+                </div>
+                <div class="upload-help">対応形式：PDF, Excel, CSV / 最大200MBまで</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="setting-title">アップロード設定</div>
+
+            <div class="field">
+              <label>対象顧客（必須）</label>
+              <select>
+                <option>サンプル株式会社</option>
+                <option>テストモビリティ株式会社</option>
+                <option>デモ商事株式会社</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>レポート種別（必須）</label>
+              <select>
+                <option>月次レポート</option>
+                <option>車両稼働レポート</option>
+                <option>コスト分析レポート</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>レポート日付（必須）</label>
+              <input type="date" />
+            </div>
+
+            <div class="field">
+              <label>公開期間（必須）</label>
+              <input type="text" value="2025/05/20 ～ 2025/07/31" />
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-light" style="flex:1;">クリア</button>
+              <button class="btn btn-navy" style="flex:1;" onclick="showToast('レポートを公開しました。')">アップロード</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:22px;">
+          <h3 style="margin:0 0 15px;">アップロード履歴（最新5件）</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>アップロード日時</th>
+                <th>ファイル名</th>
+                <th>対象顧客</th>
+                <th>レポート種別</th>
+                <th>ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025/05/20 10:15</td>
+                <td>月次レポート_202505.pdf</td>
+                <td>サンプル株式会社</td>
+                <td>月次レポート</td>
+                <td><span class="status">公開中</span></td>
+              </tr>
+              <tr>
+                <td>2025/05/18 16:40</td>
+                <td>車両稼働レポート_202505.xlsx</td>
+                <td>テストモビリティ株式会社</td>
+                <td>稼働レポート</td>
+                <td><span class="status">公開中</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- 顧客メール認証 -->
+  <section id="customerAuth" class="screen customer-bg">
+    <div class="customer-login-layout">
+      <div class="customer-copy">
+        <h1>ようこそ<br>Mobility Management Portal へ</h1>
+        <p>
+          レポートの閲覧・ダウンロードには、ご登録のメールアドレス認証が必要です。<br>
+          初期ポータルでは、パスワードを使わず、メールアドレス認証による軽量な利用体験を想定しています。
+        </p>
+
+        <div class="customer-points">
+          <span class="customer-point">✉ 簡単アクセス</span>
+          <span class="customer-point">🔒 安全に保護</span>
+          <span class="customer-point">⬇ すぐに取得</span>
+        </div>
+
+        <div style="font-size:100px; color:#bfdbfe; margin-top:40px;">🚗</div>
+      </div>
+
+      <div class="card customer-card">
+        <h2 class="auth-title">メールアドレス認証</h2>
+        <div class="auth-desc">
+          ご登録のメールアドレスを入力してください。認証用メールをお送りします。
+        </div>
+
+        <div class="field">
+          <label>メールアドレス</label>
+          <input type="text" placeholder="メールアドレスを入力してください" />
+        </div>
+
+        <button class="btn btn-primary btn-full" onclick="showScreen('customerReports'); showToast('認証メール送信後の画面遷移イメージです。');">
+          認証メールを送信
+        </button>
+
+        <div class="no-password">パスワードは不要です</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 顧客レポート一覧 -->
+  <section id="customerReports" class="screen">
+    <main class="customer-app">
+      <nav class="customer-nav">
+        <div class="nav-items">
+          <div class="nav-item">ホーム</div>
+          <div class="nav-item active">レポート一覧</div>
+          <div class="nav-item">お知らせ</div>
+          <div class="nav-item">サポート</div>
+        </div>
+        <button class="btn btn-light" onclick="showScreen('customerAuth')">ログアウト</button>
+      </nav>
+
+      <div class="report-title">
+        <h2>レポート一覧</h2>
+        <p>公開されているレポートを確認・ダウンロードできます。</p>
+      </div>
+
+      <div class="filter-row">
+        <select id="typeFilter" onchange="filterReports()">
+          <option value="">レポート種別：すべて</option>
+          <option value="月次">月次レポート</option>
+          <option value="稼働">稼働レポート</option>
+          <option value="分析">分析レポート</option>
+        </select>
+
+        <select>
+          <option>公開期間：すべて</option>
+          <option>直近1か月</option>
+          <option>直近3か月</option>
+        </select>
+
+        <input id="keyword" type="text" placeholder="レポート名で検索" oninput="filterReports()" />
+
+        <button class="btn btn-primary" onclick="filterReports()">検索</button>
+      </div>
+
+      <div class="panel" style="padding:0; overflow:hidden;">
+        <table>
+          <thead>
+            <tr>
+              <th>レポート名</th>
+              <th>レポート種別</th>
+              <th>レポート日付</th>
+              <th>公開期間</th>
+              <th>ファイルサイズ</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="reportRows"></tbody>
+        </table>
+      </div>
+
+      <div class="notice">
+        <strong>ご利用にあたってのご注意</strong><br>
+        レポートの内容に関するご不明点は、担当営業またはDX担当にお問い合わせください。
+        本画面は構想説明用のモックであり、実ファイルの保存・認証・ダウンロードは行いません。
+      </div>
+    </main>
+  </section>
+
+  <!-- 画面切替ボタン -->
+  <div class="mock-switcher">
+    <button id="btn-adminLogin" class="active" onclick="showScreen('adminLogin')">管理ログイン</button>
+    <button id="btn-adminUpload" onclick="showScreen('adminUpload')">アップロード</button>
+    <button id="btn-customerAuth" onclick="showScreen('customerAuth')">顧客認証</button>
+    <button id="btn-customerReports" onclick="showScreen('customerReports')">レポート一覧</button>
+  </div>
+
+  <script>
+    const reports = [
+      {
+        name: "月次レポート_202505.pdf",
+        type: "月次レポート",
+        date: "2025/05/31",
+        period: "2025/05/20 ～ 2025/07/31",
+        size: "1.2 MB",
+        icon: "PDF"
+      },
+      {
+        name: "車両稼働レポート_202505.xlsx",
+        type: "稼働レポート",
+        date: "2025/05/31",
+        period: "2025/05/20 ～ 2025/07/31",
+        size: "2.4 MB",
+        icon: "XLS"
+      },
+      {
+        name: "コスト分析レポート_202504.pdf",
+        type: "分析レポート",
+        date: "2025/04/30",
+        period: "2025/04/20 ～ 2025/06/30",
+        size: "1.8 MB",
+        icon: "PDF"
+      },
+      {
+        name: "サマリーレポート_202504.pdf",
+        type: "サマリーレポート",
+        date: "2025/04/30",
+        period: "2025/04/20 ～ 2025/06/30",
+        size: "1.1 MB",
+        icon: "PDF"
+      }
+    ];
+
+    function showScreen(id) {
+      document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+      });
+
+      document.getElementById(id).classList.add("active");
+
+      document.querySelectorAll(".mock-switcher button").forEach(button => {
+        button.classList.remove("active");
+      });
+
+      const activeButton = document.getElementById("btn-" + id);
+      if (activeButton) {
+        activeButton.classList.add("active");
+      }
+
+      if (id === "customerAuth" || id === "customerReports") {
+        document.getElementById("mainHeader").style.background = "#ffffff";
+        document.getElementById("mainHeader").style.color = "#111827";
+        document.querySelector(".powered").style.color = "#475569";
+      } else {
+        document.getElementById("mainHeader").style.background = "#061b3e";
+        document.getElementById("mainHeader").style.color = "#ffffff";
+        document.querySelector(".powered").style.color = "rgba(255,255,255,0.9)";
+      }
+
+      if (id === "customerReports") {
+        renderReports(reports);
+      }
+
+      window.scrollTo(0, 0);
+    }
+
+    function renderReports(data) {
+      const tbody = document.getElementById("reportRows");
+      tbody.innerHTML = "";
+
+      if (data.length === 0) {
+        tbody.innerHTML = "<tr><td colspan='6'>該当するレポートがありません。</td></tr>";
+        return;
+      }
+
+      data.forEach(report => {
+        const badgeClass = report.icon === "PDF" ? "file-pdf" : "file-xls";
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>
+            <span class="file-badge ${badgeClass}">${report.icon}</span>
+            ${report.name}
+          </td>
+          <td>${report.type}</td>
+          <td>${report.date}</td>
+          <td>${report.period}</td>
+          <td>${report.size}</td>
+          <td>
+            <button class="download-btn" onclick="showToast('モックのため実ファイルはダウンロードされません。')">
+              ↓ DL
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterReports() {
+      const keyword = document.getElementById("keyword").value.trim();
+      const type = document.getElementById("typeFilter").value;
+
+      const filtered = reports.filter(report => {
+        const matchesKeyword =
+          keyword === "" ||
+          report.name.includes(keyword) ||
+          report.type.includes(keyword);
+
+        const matchesType =
+          type === "" ||
+          report.type.includes(type) ||
+          report.name.includes(type);
+
+        return matchesKeyword && matchesType;
+      });
+
+      renderReports(filtered);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.style.display = "block";
+
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 2200);
+    }
+
+    renderReports(reports);
+  </script>
+</body>
+</html>
