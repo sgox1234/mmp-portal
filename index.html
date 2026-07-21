@@ -530,6 +530,85 @@
       margin: 0 0 11px;
     }
 
+    .auth-step-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef6ff;
+      color: #0a5bd8;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    
+    .code-card {
+      position: relative;
+    }
+    
+    .sent-mail-box {
+      background: #f8fbff;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 13px 15px;
+      color: #1e3a8a;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    
+    .code-guide {
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+    
+    .code-input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    
+    .code-input {
+      width: 52px;
+      height: 58px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      background: #ffffff;
+    }
+    
+    .code-input:focus {
+      border-color: #0a5bd8;
+      box-shadow: 0 0 0 4px rgba(10, 91, 216, 0.12);
+    }
+    
+    .resend-row {
+      text-align: center;
+      margin-top: 18px;
+    }
+    
+    .resend-link {
+      border: none;
+      background: transparent;
+      color: #0a5bd8;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    
+    .code-note {
+      margin-top: 18px;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
     .auth-desc {
       color: var(--muted);
       line-height: 1.7;
@@ -907,7 +986,7 @@
           <input type="text" placeholder="メールアドレスを入力してください" />
         </div>
 
-        <button class="btn btn-primary btn-full" onclick="showScreen('customerReports'); showToast('認証メール送信後の画面遷移イメージです。');">
+        <button class="btn btn-primary btn-full" onclick="showScreen('customerCode'); showToast('認証コードを送信しました。');">
           認証メールを送信
         </button>
 
@@ -915,6 +994,75 @@
       </div>
     </div>
   </section>
+
+  <!-- 顧客コード認証 -->
+    <section id="customerCode" class="screen customer-bg">
+      <div class="customer-login-layout">
+        <div class="customer-copy">
+          <h1>認証コードを<br>入力してください</h1>
+    
+          <p>
+            ご登録いただいているメールアドレス宛に、認証コードを送信しました。<br>
+            メールに記載された6桁の認証コードを入力してください。
+          </p>
+    
+          <div class="customer-points">
+            <span class="customer-point">✉ メール確認</span>
+            <span class="customer-point">🔢 6桁コード</span>
+            <span class="customer-point">🔒 本人確認</span>
+          </div>
+    
+          <div class="customer-hero-image-wrap">
+            <img
+              src="customer-hero-blend.png?v=1"
+              alt="Mobility Management Portal hero visual"
+              class="customer-hero-image"
+            >
+          </div>
+        </div>
+    
+        <div class="card customer-card code-card">
+          <div class="auth-step-label">Step 2 / 2</div>
+    
+          <h2 class="auth-title">レポート受領認証</h2>
+    
+          <div class="auth-desc">
+            認証コードを以下のメールアドレス宛に送信しました。
+          </div>
+    
+          <div class="sent-mail-box">
+            customer@example.co.jp
+          </div>
+    
+          <div class="code-guide">
+            メールに記載された6桁のコードを入力してください。
+          </div>
+    
+          <div class="code-input-row" aria-label="認証コード入力">
+            <input id="code1" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code2')" />
+            <input id="code2" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code3')" onkeydown="backCodeFocus(event, this, 'code1')" />
+            <input id="code3" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code4')" onkeydown="backCodeFocus(event, this, 'code2')" />
+            <input id="code4" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code5')" onkeydown="backCodeFocus(event, this, 'code3')" />
+            <input id="code5" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code6')" onkeydown="backCodeFocus(event, this, 'code4')" />
+            <input id="code6" class="code-input" type="text" inputmode="numeric" maxlength="1" onkeydown="backCodeFocus(event, this, 'code5')" />
+          </div>
+    
+          <button class="btn btn-primary btn-full" onclick="verifyCode()">
+            認証する
+          </button>
+    
+          <div class="resend-row">
+            <button class="resend-link" onclick="resendCode()">
+              認証コードを再送信
+            </button>
+          </div>
+    
+          <div class="code-note">
+            ※ 本画面はモックです。実際のメール送信・コード検証は行いません。
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- 顧客レポート一覧 -->
   <section id="customerReports" class="screen">
@@ -982,6 +1130,7 @@
     <button id="btn-adminLogin" class="active" onclick="showScreen('adminLogin')">管理ログイン</button>
     <button id="btn-adminUpload" onclick="showScreen('adminUpload')">アップロード</button>
     <button id="btn-customerAuth" onclick="showScreen('customerAuth')">顧客認証</button>
+    <button id="btn-customerCode" onclick="showScreen('customerCode')">コード認証</button>
     <button id="btn-customerReports" onclick="showScreen('customerReports')">レポート一覧</button>
   </div>
 
@@ -1037,7 +1186,7 @@
         activeButton.classList.add("active");
       }
 
-      if (id === "customerAuth" || id === "customerReports") {
+      if (id === "customerAuth" || id === "customerCode" || id === "customerReports") {
         document.getElementById("mainHeader").style.background = "#ffffff";
         document.getElementById("mainHeader").style.color = "#111827";
         document.querySelector(".powered").style.color = "#475569";
@@ -1052,6 +1201,15 @@
       }
 
       window.scrollTo(0, 0);
+
+      if (id === "customerCode") {
+        setTimeout(() => {
+          const first = document.getElementById("code1");
+          if (first) {
+            first.focus();
+          }
+        }, 100);
+      }
     }
 
     function renderReports(data) {
@@ -1118,6 +1276,65 @@
     }
 
     renderReports(reports);
+
+    function moveCodeFocus(currentInput, nextInputId) {
+      currentInput.value = currentInput.value.replace(/[^0-9]/g, "");
+    
+      if (currentInput.value.length === 1 && nextInputId) {
+        const nextInput = document.getElementById(nextInputId);
+        if (nextInput) {
+          nextInput.focus();
+        }
+      }
+    }
+    
+    function backCodeFocus(event, currentInput, prevInputId) {
+      if (event.key === "Backspace" && currentInput.value === "" && prevInputId) {
+        const prevInput = document.getElementById(prevInputId);
+        if (prevInput) {
+          prevInput.focus();
+        }
+      }
+    }
+    
+    function getAuthCode() {
+      const ids = ["code1", "code2", "code3", "code4", "code5", "code6"];
+      return ids.map(id => document.getElementById(id).value).join("");
+    }
+    
+    function clearAuthCode() {
+      const ids = ["code1", "code2", "code3", "code4", "code5", "code6"];
+    
+      ids.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+          input.value = "";
+        }
+      });
+    
+      const first = document.getElementById("code1");
+      if (first) {
+        first.focus();
+      }
+    }
+    
+    function verifyCode() {
+      const code = getAuthCode();
+    
+      if (code.length < 6) {
+        showToast("6桁の認証コードを入力してください。");
+        return;
+      }
+    
+      showToast("認証が完了しました。");
+      showScreen("customerReports");
+    }
+    
+    function resendCode() {
+      clearAuthCode();
+      showToast("認証コードを再送信しました。");
+    }
+    
   </script>
 </body>
 </html>
