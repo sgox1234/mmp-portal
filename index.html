@@ -375,22 +375,22 @@
       padding: 30px;
     }
 
-    .page-ing {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 24px;
+    .page-heading {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom:24px;
     }
-
-    .page-ing h2 {
-      font-size: 30px;
-      margin: 0 0 6px;
+    
+    .page-heading h2 {
+      font-size:30px;
+      margin:0 0 6px;
     }
-
-    .page-ing p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 14px;
+    
+    .page-heading p {
+      color:var(--muted);
+      margin:0;
+      font-size:14px;
     }
 
     .grid-upload {
@@ -749,8 +749,8 @@
         display: none;
       }
 
-      er {
-        padding: 0 18px;
+      header {
+        padding:0 18px;
       }
 
       .powered {
@@ -866,6 +866,13 @@
       margin-left:16px;
       height:38px;
       padding:0 16px;
+      align-items:center;
+      justify-content:center;
+      background:#ffffff;
+      color:#0a5bd8;
+      border:1px solid #dbe2ec;
+      border-radius:8px;
+      font-weight:700;
     }
   </style>
 </head>
@@ -1169,7 +1176,6 @@
           <div class="nav-item">お知らせ</div>
           <div class="nav-item">サポート</div>
         </div>
-        <button class="btn btn-light" onclick="showScreen('customerAuth')">ログアウト</button>
       </nav>
 
       <div class="report-title">
@@ -1294,7 +1300,7 @@
       const logoutBtn = document.getElementById("headerLogoutBtn");
 
       if (logoutBtn) {
-        if (id === "adminUpload") {
+        if (id === "adminUpload" || id === "customerReports") {
           logoutBtn.style.display = "inline-flex";
         } else {
           logoutBtn.style.display = "none";
