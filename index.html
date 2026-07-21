@@ -963,7 +963,7 @@
         </div>
 
         <div class="side-item">🏠 ダッシュボード</div>
-        <div class="side-item">📄 レポート管理</div>
+        <div class="side-item" onclick="showScreen('reportManage')">📄 レポート管理</div>
         <div class="side-item active">☁ レポートアップロード</div>
         <div class="side-item" onclick="showScreen('customerManage')">👥 顧客管理</div>
         <div class="side-item" onclick="showScreen('accessHistory')">🕘 アクセス履歴</div>
@@ -1080,12 +1080,11 @@
         </div>
   
         <div class="side-item">🏠 ダッシュボード</div>
-        <div class="side-item">📄 レポート管理</div>
   
         <div
           class="side-item"
-          onclick="showScreen('adminUpload')">
-          ☁ レポートアップロード
+          onclick="showScreen('reportManage')">
+          📄 レポート管理
         </div>
   
         <div class="side-item active">
@@ -1269,6 +1268,224 @@
   
   </section>
 
+  <section id="reportManage" class="screen">
+  
+    <div class="admin-app">
+  
+      <aside class="sidebar">
+  
+        <div class="side-logo">
+          <span class="orix-mark"></span>
+          <div>
+            <div class="side-logo-title">MMP</div>
+            <div class="side-logo-sub">Administration</div>
+          </div>
+        </div>
+  
+        <div class="side-item">🏠 ダッシュボード</div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('reportManage')">
+          📄 レポート管理
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('adminUpload')">
+          ☁ レポートアップロード
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('customerManage')">
+          👥 顧客管理
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('accessHistory')">
+          🕘 アクセス履歴
+        </div>
+  
+        <div class="side-item">
+          ⚙ 設定
+        </div>
+  
+      </aside>
+  
+      <main class="admin-main">
+  
+        <div class="page-heading">
+  
+          <div>
+            <h2>レポート管理</h2>
+            <p>公開中レポートを管理します。</p>
+          </div>
+  
+          <button
+            class="btn btn-primary"
+            onclick="showScreen('adminUpload')">
+  
+            ＋ 新規アップロード
+  
+          </button>
+  
+        </div>
+  
+        <div class="panel">
+  
+          <table>
+  
+            <thead>
+              <tr>
+                <th>レポート名</th>
+                <th>対象顧客</th>
+                <th>種別</th>
+                <th>公開状況</th>
+                <th>公開期間</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+  
+              <tr>
+                <td>月次レポート_202606.pdf</td>
+                <td>サンプル株式会社</td>
+                <td>月次</td>
+                <td>
+                  <span class="status">
+                    公開中
+                  </span>
+                </td>
+                <td>
+                  2026/06/01～
+                  2026/08/31
+                </td>
+                <td>
+                  <button class="download-btn">
+                    詳細
+                  </button>
+  
+                  <button
+                    class="download-btn"
+                    style="margin-left:6px;">
+                    停止
+                  </button>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>稼働レポート_202606.xlsx</td>
+                <td>テストモビリティ株式会社</td>
+                <td>稼働</td>
+                <td>
+                  <span class="status">
+                    公開中
+                  </span>
+                </td>
+                <td>
+                  2026/06/01～
+                  2026/08/31
+                </td>
+                <td>
+                  <button class="download-btn">
+                    詳細
+                  </button>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>コスト分析_202605.pdf</td>
+                <td>デモ商事株式会社</td>
+                <td>分析</td>
+                <td>
+  
+                  <span style="
+                    background:#fee2e2;
+                    color:#b91c1c;
+                    padding:4px 10px;
+                    border-radius:999px;
+                    font-size:12px;
+                    font-weight:800;">
+  
+                    公開停止
+  
+                  </span>
+  
+                </td>
+  
+                <td>
+                  2026/05/01～
+                  2026/06/30
+                </td>
+  
+                <td>
+                  <button class="download-btn">
+                    再公開
+                  </button>
+                </td>
+  
+              </tr>
+  
+            </tbody>
+  
+          </table>
+  
+        </div>
+  
+        <div
+          class="panel"
+          style="margin-top:22px;">
+  
+          <h3 style="margin-top:0;">
+            レポートサマリー
+          </h3>
+  
+          <div
+            style="
+              display:flex;
+              gap:20px;">
+  
+            <div style="flex:1;">
+              <div style="font-size:13px;color:#64748b;">
+                公開中
+              </div>
+              <div style="font-size:32px;font-weight:800;color:#16a34a;">
+                248
+              </div>
+            </div>
+  
+            <div style="flex:1;">
+              <div style="font-size:13px;color:#64748b;">
+                公開停止
+              </div>
+              <div style="font-size:32px;font-weight:800;color:#dc2626;">
+                18
+              </div>
+            </div>
+  
+            <div style="flex:1;">
+              <div style="font-size:13px;color:#64748b;">
+                今月アップロード
+              </div>
+              <div style="font-size:32px;font-weight:800;color:#0a5bd8;">
+                42
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </main>
+  
+    </div>
+  
+  </section>
+
+  
   <section id="accessHistory" class="screen">
   
     <div class="admin-app">
@@ -1284,7 +1501,11 @@
         </div>
   
         <div class="side-item">🏠 ダッシュボード</div>
-        <div class="side-item">📄 レポート管理</div>
+        <div
+          class="side-item"
+          onclick="showScreen('reportManage')">
+          📄 レポート管理
+        </div>
   
         <div
           class="side-item"
