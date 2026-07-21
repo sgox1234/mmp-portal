@@ -1,84 +1,146 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>MMP - Mobility Management Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMP - Mobility Management Portal</title>
+  <style>
+    :root {
+      --navy: #061b3e;
+      --navy-dark: #031633;
+      --blue: #0a5bd8;
+      --light-blue: #eef7ff;
+      --sky: #dff1ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d9dee8;
+      --bg: #f5f7fb;
+      --green: #16a34a;
+      --red: #dc2626;
+    }
 
-<style>
+    * {
+      box-sizing: border-box;
+    }
 
-body{
-  margin:0;
-  font-family:Segoe UI,sans-serif;
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Meiryo", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
 
-.header{
-  background:#061b3e;
-  color:white;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-}
+    header {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      background: var(--navy);
+      color: white;
+    }
 
-.logo{
-  font-size:28px;
-  font-weight:bold;
-}
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
 
-.container{
-  padding:40px;
-}
+    .brand-main {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
 
-.card{
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:25px;
-  margin-bottom:20px;
-}
+    .brand-sub {
+      font-size: 15px;
+      font-weight: 500;
+    }
 
-.button{
-  background:#0a4fd8;
-  color:white;
-  padding:10px 20px;
-  border:none;
-  border-radius:8px;
-}
+    .powered {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.9);
+    }
 
-</style>
+    .orix-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
 
-</head>
+    .orix-mark {
+      width: 33px;
+      height: 18px;
+      background: #e60012;
+      transform: skewX(-14deg);
+      border-radius: 2px;
+      display: inline-block;
+    }
 
-<body>
+    .screen {
+      display: none;
+      min-height: calc(100vh - 68px);
+    }
 
-<div class="header">
+    .screen.active {
+      display: block;
+    }
 
-<div>
-<span class="logo">MMP</span>
-Mobility Management Portal
-</div>
+    .admin-bg {
+      background: var(--navy-dark);
+      color: white;
+    }
 
-<div>
-Powered by ORIX Auto
-</div>
+    .customer-bg {
+      background: linear-gradient(135deg, #f7fbff 0%, #ffffff 45%, #e8f5ff 100%);
+    }
 
-</div>
+    .admin-login-layout {
+      min-height: calc(100vh - 68px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+    }
 
-<div class="container">
+    .admin-hero {
+      padding: 80px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-<div class="card">
-<h2>管理者ログイン</h2>
+    .admin-hero .eyebrow {
+      color: #bcd7ff;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
 
-<input type="text" placeholder="メールアドレス"><br><br>
+    .admin-hero h1 {
+      font-size: 52px;
+      line-height: 1.08;
+      margin: 0 0 22px;
+      letter-spacing: -1px;
+    }
 
-<input type="password" placeholder="パスワード"><br><br>
+    .admin-hero p {
+      font-size: 18px;
+      color: #dbeafe;
+      margin: 0 0 28px;
+    }
 
-<button class="button">
-ログイン
-</button>
+    .security-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #bfdbfe;
+      font-size: 14px;
+    }
 
-</div>
-
-</div>
-
-</body>
-
-</html>
+    .login-area {
+      display: flex;
+      align
