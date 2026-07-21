@@ -995,74 +995,73 @@
     </div>
   </section>
 
-  <!-- 顧客コード認証 -->
-    <section id="customerCode" class="screen customer-bg">
-      <div class="customer-login-layout">
-        <div class="customer-copy">
-          <h1>認証コードを<br>入力してください</h1>
-    
-          <p>
-            ご登録いただいているメールアドレス宛に、認証コードを送信しました。<br>
-            メールに記載された6桁の認証コードを入力してください。
-          </p>
-    
-          <div class="customer-points">
-            <span class="customer-point">✉ メール確認</span>
-            <span class="customer-point">🔢 6桁コード</span>
-            <span class="customer-point">🔒 本人確認</span>
-          </div>
-    
-          <div class="customer-hero-image-wrap">
-            <img
-              src="assets/customer-hero.png?v=1"
-              alt="Mobility Management Portal hero visual"
-              class="customer-hero-image"
-            >
-          </div>
+<!-- 顧客コード認証 -->
+  <section id="customerCode" class="screen customer-bg">
+  
+    <div class="verify-wrapper">
+  
+      <div class="verify-card">
+  
+        <div class="verify-icon">
+          🔐
         </div>
-    
-        <div class="card customer-card code-card">
-          <div class="auth-step-label">Step 2 / 2</div>
-    
-          <h2 class="auth-title">レポート受領認証</h2>
-    
-          <div class="auth-desc">
-            認証コードを以下のメールアドレス宛に送信しました。
-          </div>
-    
-          <div class="sent-mail-box">
-            customer@example.co.jp
-          </div>
-    
-          <div class="code-guide">
-            メールに記載された6桁のコードを入力してください。
-          </div>
-    
-          <div class="code-input-row" aria-label="認証コード入力">
-            <input id="code1" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code2')" />
-            <input id="code2" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code3')" onkeydown="backCodeFocus(event, this, 'code1')" />
-            <input id="code3" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code4')" onkeydown="backCodeFocus(event, this, 'code2')" />
-            <input id="code4" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code5')" onkeydown="backCodeFocus(event, this, 'code3')" />
-            <input id="code5" class="code-input" type="text" inputmode="numeric" maxlength="1" oninput="moveCodeFocus(this, 'code6')" onkeydown="backCodeFocus(event, this, 'code4')" />
-            <input id="code6" class="code-input" type="text" inputmode="numeric" maxlength="1" onkeydown="backCodeFocus(event, this, 'code5')" />
-          </div>
-    
-          <button class="btn btn-primary btn-full" onclick="verifyCode()">
-            認証する
+  
+        <div class="verify-step">
+          Step 2 / 2
+        </div>
+  
+        <h2 class="verify-title">
+          レポート受領認証
+        </h2>
+  
+        <p class="verify-description">
+          ご登録のメールアドレスへ認証コードを送信しました。
+        </p>
+  
+        <div class="verify-mail">
+          customer@example.co.jp
+        </div>
+  
+        <p class="verify-code-guide">
+          メールに記載された6桁の認証コードを入力してください。
+        </p>
+  
+        <div class="code-input-row">
+          <input id="code1" class="code-input" maxlength="1">
+          <input id="code2" class="code-input" maxlength="1">
+          <input id="code3" class="code-input" maxlength="1">
+          <input id="code4" class="code-input" maxlength="1">
+          <input id="code5" class="code-input" maxlength="1">
+          <input id="code6" class="code-input" maxlength="1">
+        </div>
+  
+        <button
+          class="btn btn-primary btn-full"
+          onclick="verifyCode()">
+          認証する
+        </button>
+  
+        <div class="verify-links">
+  
+          <button
+            class="verify-link"
+            onclick="resendCode()">
+  
+            認証コードを再送信
+  
           </button>
-    
-          <div class="resend-row">
-            <button class="resend-link" onclick="resendCode()">
-              認証コードを再送信
-            </button>
-          </div>
-    
-          <div class="code-note">
-            ※ 本画面はモックです。実際のメール送信・コード検証は行いません。
-          </div>
+  
         </div>
+  
+        <div class="verify-note">
+          ※ 本画面はモックです。実際の認証処理は行いません。
+        </div>
+  
       </div>
-    </section>
+  
+    </div>
+  
+  </section>
 
   <!-- 顧客レポート一覧 -->
   <section id="customerReports" class="screen">
