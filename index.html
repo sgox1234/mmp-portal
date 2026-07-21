@@ -860,6 +860,13 @@
       font-size:12px;
       color:#94a3b8;
     }
+
+    #headerLogoutBtn{
+      display:none;
+      margin-left:16px;
+      height:38px;
+      padding:0 16px;
+    }
   </style>
 </head>
 
@@ -870,12 +877,14 @@
       <div class="brand-sub">Mobility Management Portal</div>
     </div>
     <div class="powered">
+    
       <span>Powered by ●●●● Auto</span>
+    
       <span class="orix-logo">
-      <span class="orix-mark small"></span>
-      <span class="orix-word">●●●● AUTO</span>
-</span>
-
+        <span class="orix-mark small"></span>
+        <span class="orix-word">●●●● AUTO</span>
+      </span>
+      <button id="headerLogoutBtn" class="btn btn-light" onclick="showScreen('adminLogin')">ログアウト</button>
     </div>
   </header>
 
@@ -948,7 +957,6 @@
             <h2>レポートアップロード</h2>
             <p>顧客に提供するレポートファイルをアップロードしてください。</p>
           </div>
-          <button class="btn btn-light" onclick="showScreen('adminLogin')">ログアウト</button>
         </div>
 
         <div class="grid-upload">
@@ -1281,6 +1289,16 @@
         document.getElementById("mainHeader").style.background = "#061b3e";
         document.getElementById("mainHeader").style.color = "#ffffff";
         document.querySelector(".powered").style.color = "rgba(255,255,255,0.9)";
+      }
+
+      const logoutBtn = document.getElementById("headerLogoutBtn");
+
+      if (logoutBtn) {
+        if (id === "adminUpload") {
+          logoutBtn.style.display = "inline-flex";
+        } else {
+          logoutBtn.style.display = "none";
+        }
       }
 
       if (id === "customerReports") {
