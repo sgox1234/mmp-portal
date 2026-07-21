@@ -678,6 +678,20 @@
         overflow-x: auto;
       }
     }
+    .customer-hero-image-wrap {
+      margin-top: 34px;
+      width: 640px;
+      max-width: 100%;
+      opacity: 0.96;
+    }
+    
+    .customer-hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 40px rgba(37, 99, 235, 0.14));
+    }
   </style>
 </head>
 
@@ -872,50 +886,12 @@
           <span class="customer-point">⬇ すぐに取得</span>
         </div>
 
-        <div class="mobility-visual" aria-label="Mobility Management Portal illustration">
-          <svg viewBox="0 0 520 300" role="img">
-            <!-- buildings -->
-            <rect class="visual-building" x="40" y="145" width="46" height="95" rx="4"></rect>
-            <rect class="visual-building" x="98" y="120" width="58" height="120" rx="4"></rect>
-            <rect class="visual-building" x="170" y="155" width="42" height="85" rx="4"></rect>
-        
-            <rect x="55" y="165" width="8" height="8" fill="#ffffff"></rect>
-            <rect x="73" y="165" width="8" height="8" fill="#ffffff"></rect>
-            <rect x="55" y="188" width="8" height="8" fill="#ffffff"></rect>
-            <rect x="73" y="188" width="8" height="8" fill="#ffffff"></rect>
-        
-            <rect x="113" y="140" width="9" height="9" fill="#ffffff"></rect>
-            <rect x="134" y="140" width="9" height="9" fill="#ffffff"></rect>
-            <rect x="113" y="165" width="9" height="9" fill="#ffffff"></rect>
-            <rect x="134" y="165" width="9" height="9" fill="#ffffff"></rect>
-        
-            <!-- cloud -->
-            <circle class="visual-cloud" cx="330" cy="128" r="42"></circle>
-            <circle class="visual-cloud" cx="375" cy="130" r="34"></circle>
-            <circle class="visual-cloud" cx="295" cy="145" r="30"></circle>
-            <rect class="visual-cloud" x="285" y="128" width="120" height="55" rx="26"></rect>
-        
-            <!-- upload arrow -->
-            <path d="M336 158 L336 102 L318 120 L307 109 L344 72 L381 109 L370 120 L352 102 L352 158 Z" fill="#ffffff" opacity="0.95"></path>
-            <rect x="376" y="153" width="42" height="35" rx="5" fill="#ffffff" opacity="0.95"></rect>
-        
-            <!-- road -->
-            <rect x="70" y="242" width="360" height="8" rx="4" fill="#cbd5e1"></rect>
-        
-            <!-- car -->
-            <path class="visual-car-body" d="M150 212 C165 180 205 168 252 174 L305 181 C329 184 348 201 356 222 L365 222 C373 222 380 229 380 238 L380 248 L126 248 L126 232 C126 221 135 212 146 212 Z"></path>
-            <path class="visual-car-accent" d="M150 212 C162 188 190 176 224 174 L218 212 Z"></path>
-            <path class="visual-car-window" d="M226 181 L253 184 C268 186 281 196 288 211 L225 211 Z"></path>
-            <path class="visual-car-window" d="M182 187 C196 181 210 179 224 180 L216 211 L165 211 C169 200 174 192 182 187 Z"></path>
-        
-            <circle class="visual-wheel" cx="180" cy="248" r="24"></circle>
-            <circle class="visual-wheel-inner" cx="180" cy="248" r="10"></circle>
-            <circle class="visual-wheel" cx="318" cy="248" r="24"></circle>
-            <circle class="visual-wheel-inner" cx="318" cy="248" r="10"></circle>
-        
-            <rect x="132" y="222" width="24" height="10" rx="5" fill="#facc15"></rect>
-            <rect x="356" y="224" width="13" height="9" rx="4" fill="#ef4444"></rect>
-          </svg>
+        <div class="customer-hero-image-wrap">
+          <img
+            src="assets/customer-hero.png"
+            alt="Mobility Management Portal hero visual"
+            class="customer-hero-image"
+          >
         </div>
       </div>
 
