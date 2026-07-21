@@ -1065,6 +1065,208 @@
     </div>
   </section>
 
+  <section id="customerManage" class="screen">
+
+    <div class="admin-app">
+  
+      <aside class="sidebar">
+  
+        <div class="side-logo">
+          <span class="orix-mark"></span>
+          <div>
+            <div class="side-logo-title">MMP</div>
+            <div class="side-logo-sub">Administration</div>
+          </div>
+        </div>
+  
+        <div class="side-item">🏠 ダッシュボード</div>
+        <div class="side-item">📄 レポート管理</div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('adminUpload')">
+          ☁ レポートアップロード
+        </div>
+  
+        <div class="side-item active">
+          👥 顧客管理
+        </div>
+  
+        <div class="side-item">
+          🕘 アクセス履歴
+        </div>
+  
+        <div class="side-item">
+          ⚙ 設定
+        </div>
+  
+      </aside>
+  
+      <main class="admin-main">
+  
+        <div class="page-heading">
+  
+          <div>
+            <h2>顧客管理</h2>
+            <p>顧客情報と利用状況を管理します。</p>
+          </div>
+  
+          <button
+            class="btn btn-primary"
+            onclick="showToast('顧客登録モックです。')">
+            ＋ 新規顧客登録
+          </button>
+  
+        </div>
+  
+        <div class="panel">
+  
+          <table>
+  
+            <thead>
+  
+              <tr>
+                <th>顧客名</th>
+                <th>メールアドレス</th>
+                <th>契約プラン</th>
+                <th>利用状況</th>
+                <th>最終アクセス</th>
+                <th>操作</th>
+              </tr>
+  
+            </thead>
+  
+            <tbody>
+  
+              <tr>
+                <td>サンプル株式会社</td>
+                <td>portal@example.com</td>
+                <td>Standard</td>
+                <td><span class="status">利用中</span></td>
+                <td>2026/07/21 09:45</td>
+                <td>
+                  <button class="download-btn">
+                    詳細
+                  </button>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>テストモビリティ株式会社</td>
+                <td>admin@test-mobility.co.jp</td>
+                <td>Premium</td>
+                <td><span class="status">利用中</span></td>
+                <td>2026/07/20 16:21</td>
+                <td>
+                  <button class="download-btn">
+                    詳細
+                  </button>
+                </td>
+              </tr>
+  
+              <tr>
+                <td>デモ商事株式会社</td>
+                <td>demo@example.co.jp</td>
+                <td>Standard</td>
+                <td>
+                  <span
+                    style="
+                      background:#fee2e2;
+                      color:#b91c1c;
+                      padding:4px 10px;
+                      border-radius:999px;
+                      font-size:12px;
+                      font-weight:800;">
+                    停止中
+                  </span>
+                </td>
+                <td>2026/06/15 11:08</td>
+                <td>
+                  <button class="download-btn">
+                    詳細
+                  </button>
+                </td>
+              </tr>
+  
+            </tbody>
+  
+          </table>
+  
+        </div>
+  
+        <div
+          class="panel"
+          style="margin-top:22px;">
+  
+          <h3 style="margin-top:0;">
+            利用状況サマリー
+          </h3>
+  
+          <div
+            style="
+              display:flex;
+              gap:20px;">
+  
+            <div style="flex:1;">
+              <div
+                style="
+                  font-size:13px;
+                  color:#64748b;">
+                登録顧客数
+              </div>
+  
+              <div
+                style="
+                  font-size:32px;
+                  font-weight:800;">
+                128
+              </div>
+            </div>
+  
+            <div style="flex:1;">
+              <div
+                style="
+                  font-size:13px;
+                  color:#64748b;">
+                利用中
+              </div>
+  
+              <div
+                style="
+                  font-size:32px;
+                  font-weight:800;
+                  color:#16a34a;">
+                118
+              </div>
+            </div>
+  
+            <div style="flex:1;">
+              <div
+                style="
+                  font-size:13px;
+                  color:#64748b;">
+                停止中
+              </div>
+  
+              <div
+                style="
+                  font-size:32px;
+                  font-weight:800;
+                  color:#dc2626;">
+                10
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </main>
+  
+    </div>
+  
+  </section>
+  
   <!-- 顧客メール認証 -->
   <section id="customerAuth" class="screen customer-bg">
     <div class="customer-login-layout">
@@ -1242,6 +1444,7 @@
   <div class="mock-switcher">
     <button id="btn-adminLogin" class="active" onclick="showScreen('adminLogin')">管理ログイン</button>
     <button id="btn-adminUpload" onclick="showScreen('adminUpload')">アップロード</button>
+    <button id="btn-customerManage" onclick="showScreen('customerManage')">顧客管理</button>
     <button id="btn-customerAuth" onclick="showScreen('customerAuth')">顧客認証</button>
     <button id="btn-customerCode" onclick="showScreen('customerCode')">コード認証</button>
     <button id="btn-customerReports" onclick="showScreen('customerReports')">レポート一覧</button>
