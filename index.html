@@ -886,6 +886,60 @@
       border-color:#c7c7c7;
       color:#ffffff;
     }
+
+    .modal-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(15,23,42,0.55);
+    
+      display:none;
+      align-items:center;
+      justify-content:center;
+    
+      z-index:999;
+    }
+    
+    .modal{
+      width:520px;
+      max-width:90vw;
+    
+      background:#fff;
+    
+      border-radius:20px;
+    
+      box-shadow:
+        0 20px 50px rgba(0,0,0,.2);
+    
+      overflow:hidden;
+    }
+    
+    .modal-header{
+      padding:24px 28px;
+      border-bottom:1px solid #e5e7eb;
+    }
+    
+    .modal-title{
+      margin:0;
+      font-size:24px;
+      font-weight:800;
+    }
+    
+    .modal-body{
+      padding:28px;
+    }
+    
+    .modal-footer{
+      padding:20px 28px;
+      border-top:1px solid #e5e7eb;
+    
+      display:flex;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    
+    .modal-close{
+      cursor:pointer;
+    }
   </style>
 </head>
 
@@ -1146,9 +1200,11 @@
                 <td><span class="status">利用中</span></td>
                 <td>2026/07/21 09:45</td>
                 <td>
-                  <button class="download-btn">
-                    詳細
-                  </button>
+                <button
+                  class="download-btn"
+                  onclick="openPeriodModal()">
+                  公開期間変更
+                </button>
                 </td>
               </tr>
   
@@ -1159,8 +1215,10 @@
                 <td><span class="status">利用中</span></td>
                 <td>2026/07/20 16:21</td>
                 <td>
-                  <button class="download-btn">
-                    詳細
+                  <button
+                    class="download-btn"
+                    onclick="openPeriodModal()">
+                    公開期間変更
                   </button>
                 </td>
               </tr>
@@ -2276,6 +2334,88 @@
       showToast("認証コードを再送信しました。");
     }
     
+    function openPeriodModal(){
+      document.getElementById(
+        "periodModal"
+      ).style.display = "flex";
+    }
+    
+    function closePeriodModal(){
+      document.getElementById(
+        "periodModal"
+      ).style.display = "none";
+    }
+    
+    function savePeriodModal(){
+      closePeriodModal();
+      showToast(
+        "公開期間を変更しました。"
+      );
+    }
+    
   </script>
+
+  <div
+    id="periodModal"
+    class="modal-overlay">
+  
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          公開期間変更
+        </h3>
+      </div>
+  
+      <div class="modal-body">
+        <div class="field">
+          <label>レポート名</label>
+          <input
+            type="text"
+            value="月次レポート_202606.pdf"
+            readonly>
+        </div>
+  
+        <div class="field">
+          <label>公開開始日</label>
+          <input
+            type="date"
+            value="2026-06-01">
+        </div>
+  
+        <div class="field">
+          <label>公開終了日</label>
+          <input
+            type="date"
+            value="2026-08-31">
+        </div>
+  
+        <div
+          style="
+            padding:14px;
+            background:#eff6ff;
+            border:1px solid #bfdbfe;
+            border-radius:10px;
+            color:#1e40af;
+            font-size:13px;">
+          変更後は即時反映されます。
+        </div>
+      </div>
+  
+      <div class="modal-footer">
+        <button
+          class="btn btn-light"
+          onclick="closePeriodModal()">
+          キャンセル
+        </button>
+  
+        <button
+          class="btn btn-primary"
+          onclick="savePeriodModal()">
+          保存
+        </button>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
