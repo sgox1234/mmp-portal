@@ -2182,7 +2182,35 @@
   <section id="reportDetail" class="screen">
     <div class="admin-app">
       <aside class="sidebar">
-        <!-- サイドバーは他画面と同じ -->
+        <div class="side-item" onclick="showScreen('dashboard')">🏠 ダッシュボード</div>
+  
+        <div
+          class="side-item active"
+          onclick="showScreen('reportManage')">
+          📄 レポート管理
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('adminUpload')">
+          ☁ レポートアップロード
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('customerManage')">
+          👥 顧客管理
+        </div>
+  
+        <div
+          class="side-item"
+          onclick="showScreen('accessHistory')">
+          🕘 アクセス履歴
+        </div>
+  
+        <div class="side-item">
+          ⚙ 設定
+        </div>
       </aside>
       <main class="admin-main">
         <div class="page-heading">
