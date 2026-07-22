@@ -1215,7 +1215,9 @@
                 <td><span class="status">利用中</span></td>
                 <td>2026/07/20 16:21</td>
                 <td>
-                  <button class="download-btn">
+                  <button
+                    class="download-btn"
+                    onclick="showScreen('customerDetail')">
                     詳細
                   </button>
                 </td>
@@ -1239,7 +1241,9 @@
                 </td>
                 <td>2026/06/15 11:08</td>
                 <td>
-                  <button class="download-btn">
+                  <button
+                    class="download-btn"
+                    onclick="showScreen('customerDetail')">
                     詳細
                   </button>
                 </td>
@@ -1316,6 +1320,239 @@
     </div>
   </section>
   <!-- ■■■■　顧客管理　■■■■ -->
+
+  <!-- ■■■■　顧客管理詳細　■■■■ -->
+  <section id="customerDetail" class="screen">
+    <div class="admin-app">
+      <aside class="sidebar">
+        <div class="side-logo">
+          <span class="orix-mark"></span>
+          <div>
+            <div class="side-logo-title">MMP</div>
+            <div class="side-logo-sub">Administration</div>
+          </div>
+        </div>
+  
+        <div class="side-item" onclick="showScreen('dashboard')">
+          🏠 ダッシュボード
+        </div>
+  
+        <div class="side-item" onclick="showScreen('reportManage')">
+          📄 レポート管理
+        </div>
+  
+        <div class="side-item" onclick="showScreen('adminUpload')">
+          ☁ レポートアップロード
+        </div>
+  
+        <div class="side-item active">
+          👥 顧客管理
+        </div>
+  
+        <div class="side-item" onclick="showScreen('accessHistory')">
+          🕘 アクセス履歴
+        </div>
+      </aside>
+  
+      <main class="admin-main">
+        <div class="page-heading">
+
+          <div>
+            <h2>顧客詳細</h2>
+            <p>顧客情報・利用状況を確認できます。</p>
+          </div>
+  
+          <button
+            class="btn btn-light"
+            onclick="showScreen('customerManage')">
+            ← 顧客管理へ戻る
+          </button>
+        </div>
+  
+        <!-- 顧客情報 -->
+        <div class="panel">
+  
+          <div
+            style="
+              display:flex;
+              justify-content:space-between;
+              align-items:center;
+            ">
+  
+            <div>
+              <div
+                style="
+                  font-size:24px;
+                  font-weight:800;">
+                サンプル株式会社
+              </div>
+  
+              <div
+                style="
+                  color:#64748b;
+                  margin-top:4px;">
+                portal@example.com
+              </div>
+            </div>
+  
+            <span class="status">
+              利用中
+            </span>
+          </div>
+        </div>
+  
+        <!-- KPI -->
+        <div
+          style="
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+            margin-top:22px;
+          ">
+  
+          <div class="panel">
+            <div
+              style="
+                font-size:13px;
+                color:#64748b;">
+              登録ユーザー
+            </div>
+  
+            <div
+              style="
+                font-size:36px;
+                font-weight:800;
+                color:#0a5bd8;">
+              3
+            </div>
+  
+          </div>
+  
+          <div class="panel">
+            <div
+              style="
+                font-size:13px;
+                color:#64748b;">
+              公開レポート
+            </div>
+  
+            <div
+              style="
+                font-size:36px;
+                font-weight:800;
+                color:#16a34a;">
+              12
+            </div>
+          </div>
+  
+          <div class="panel">
+            <div
+              style="
+                font-size:13px;
+                color:#64748b;">
+              DL数
+            </div>
+  
+            <div
+              style="
+                font-size:36px;
+                font-weight:800;
+                color:#ea580c;">
+              358
+            </div>
+          </div>
+  
+          <div class="panel">
+            <div
+              style="
+                font-size:13px;
+                color:#64748b;">
+              最終アクセス
+            </div>
+  
+            <div
+              style="
+                font-size:20px;
+                font-weight:700;
+                margin-top:10px;">
+              2026/07/21
+            </div>
+          </div>
+        </div>
+  
+        <!-- 顧客操作 -->
+        <div
+          class="panel"
+          style="margin-top:22px;">
+  
+          <h3 style="margin-top:0;">
+            顧客操作
+          </h3>
+  
+          <div class="actions">
+            <button class="btn btn-primary">
+              ユーザー追加
+            </button>
+  
+            <button class="btn btn-light">
+              情報編集
+            </button>
+  
+            <button
+              class="btn"
+              style="
+                background:#dc2626;
+                color:#fff;"
+              onclick="openCustomerStopModal()">
+              利用停止
+            </button>
+          </div>
+        </div>
+  
+        <!-- 登録ユーザー -->
+        <div
+          class="panel"
+          style="margin-top:22px;">
+  
+          <h3 style="margin-top:0;">
+            登録ユーザー
+          </h3>
+  
+          <table>
+            <thead>
+              <tr>
+                <th>メールアドレス</th>
+                <th>権限</th>
+                <th>最終ログイン</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+  
+              <tr>
+                <td>portal@example.com</td>
+                <td>管理者</td>
+                <td>2026/07/21</td>
+              </tr>
+  
+              <tr>
+                <td>user01@example.com</td>
+                <td>一般</td>
+                <td>2026/07/20</td>
+              </tr>
+  
+              <tr>
+                <td>user02@example.com</td>
+                <td>一般</td>
+                <td>2026/07/18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </section>
+  <!-- ■■■■　顧客管理詳細　■■■■ -->
 
   <!-- ■■■■　レポート管理　■■■■ -->
   <section id="reportManage" class="screen">
