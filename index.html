@@ -940,6 +940,37 @@
     .modal-close{
       cursor:pointer;
     }
+
+    .plan-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    
+      padding:6px 12px;
+    
+      border-radius:999px;
+    
+      font-size:12px;
+      font-weight:800;
+    
+      white-space:nowrap;
+    }
+    
+    .plan-badge.premium{
+      background:#fef3c7;
+      color:#b45309;
+    }
+    
+    .plan-badge.standard{
+      background:#eef6ff;
+      color:#0a5bd8;
+    }
+    
+    .plan-badge.light{
+      background:#f3f4f6;
+      color:#6b7280;
+    }
+    
   </style>
 
   <!-- ■■■■　終了　CSS　■■■■■ -->
@@ -1198,7 +1229,11 @@
               <tr>
                 <td>サンプル株式会社</td>
                 <td>portal@example.com</td>
-                <td>Standard</td>
+                <td>
+                  <span class="plan-badge standard">
+                    Standard
+                  </span>
+                </td>
                 <td><span class="status">利用中</span></td>
                 <td>2026/07/21 09:45</td>
                 <td>
@@ -1213,7 +1248,11 @@
               <tr>
                 <td>テストモビリティ株式会社</td>
                 <td>admin@test-mobility.co.jp</td>
-                <td>Premium</td>
+                <td>
+                  <span class="plan-badge premium">
+                    Premium
+                  </span>
+                </td>
                 <td><span class="status">利用中</span></td>
                 <td>2026/07/20 16:21</td>
                 <td>
@@ -1228,7 +1267,11 @@
               <tr>
                 <td>デモ商事株式会社</td>
                 <td>demo@example.co.jp</td>
-                <td>Standard</td>
+                <td>
+                  <span class="plan-badge standard">
+                    Standard
+                  </span>
+                </td>
                 <td>
                   <span
                     style="
@@ -1418,72 +1461,60 @@
               padding-top:20px;
               border-top:1px solid #e5e7eb;
             ">
-        
+          
             <div>
-        
+          
               <div
                 style="
                   font-size:12px;
-                  color:#64748b;
-                  margin-bottom:4px;">
-        
+                  color:#64748b;">
                 契約プラン
-        
               </div>
-        
-              <div
-                style="
-                  font-size:18px;
-                  font-weight:700;">
-        
-                Premium
-        
+          
+              <div style="margin-top:8px;">
+                <span class="plan-badge premium">
+                  Premium
+                </span>
               </div>
-        
+          
             </div>
-        
+          
             <div>
-        
+          
               <div
                 style="
                   font-size:12px;
-                  color:#64748b;
-                  margin-bottom:4px;">
-        
+                  color:#64748b;">
                 契約開始日
-        
               </div>
-        
+          
               <div
                 style="
-                  font-size:18px;
+                  margin-top:8px;
                   font-weight:700;">
-        
                 2025/04/01
-        
               </div>
-        
+          
             </div>
-        
+          
             <div>
-        
+          
               <div
                 style="
                   font-size:12px;
-                  color:#64748b;
-                  margin-bottom:4px;">
-        
+                  color:#64748b;">
                 契約更新日
-        
               </div>
-        
+          
               <div
                 style="
-                  font-size:18px;
+                  margin-top:8px;
                   font-weight:700;">
                 2027/03/31
               </div>
+          
             </div>
+          
           </div>
   
         <!-- KPI -->
