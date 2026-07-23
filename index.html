@@ -2175,12 +2175,14 @@
               顧客プラン構成
             </h3>
           
+            <!-- ラベル -->
             <div
               style="
                 display:flex;
                 gap:12px;
                 margin-top:20px;
-                flex-wrap:wrap;">
+                flex-wrap:wrap;
+              ">
           
               <span class="plan-badge premium">
                 Premium 25%
@@ -2193,9 +2195,116 @@
               <span class="plan-badge light">
                 Light 15%
               </span>
+          
             </div>
+          
+            <!-- 構成比バー -->
+            <div
+              style="
+                display:flex;
+                overflow:hidden;
+                border-radius:999px;
+                height:18px;
+                margin-top:22px;
+                background:#f1f5f9;
+              ">
+          
+              <div
+                style="
+                  width:25%;
+                  background:#f59e0b;">
+              </div>
+          
+              <div
+                style="
+                  width:60%;
+                  background:#0a5bd8;">
+              </div>
+          
+              <div
+                style="
+                  width:15%;
+                  background:#94a3b8;">
+              </div>
+          
+            </div>
+          
+            <!-- 件数 -->
+            <div
+              style="
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                gap:12px;
+                margin-top:22px;
+                text-align:center;
+              ">
+              <div>
+                <div
+                  style="
+                    font-size:28px;
+                    font-weight:800;
+                    color:#b45309;">
+                  32
+                </div>
+          
+                <div
+                  style="
+                    font-size:12px;
+                    color:#64748b;">
+                  Premium
+                </div>
+              </div>
+          
+              <div>
+                <div
+                  style="
+                    font-size:28px;
+                    font-weight:800;
+                    color:#0a5bd8;">
+                  77
+                </div>
+          
+                <div
+                  style="
+                    font-size:12px;
+                    color:#64748b;">
+                  Standard
+                </div>
+              </div>
+          
+              <div>
+                <div
+                  style="
+                    font-size:28px;
+                    font-weight:800;
+                    color:#6b7280;">
+                  19
+                </div>
+                <div
+                  style="
+                    font-size:12px;
+                    color:#64748b;">
+                  Light
+                </div>
+              </div>
+            </div>
+          
+            <!-- コメント -->
+            <div
+              style="
+                margin-top:22px;
+                padding:12px 14px;
+                background:#f8fafc;
+                border-radius:10px;
+                font-size:13px;
+                line-height:1.6;
+                color:#475569;
+              ">
+              Standardプランが全体の60%を占めています。<br>
+              Premium比率は25%で、アップセル拡大余地があります。
+            </div>
+          
           </div>
-
           <div class="panel">
             <h3 style="margin-top:0;">
               最近のアクティビティ
