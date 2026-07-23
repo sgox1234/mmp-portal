@@ -2854,11 +2854,17 @@
       const logoutBtn = document.getElementById("headerLogoutBtn");
 
       if (logoutBtn) {
-        if (id === "adminUpload" || id === "customerReports") {
-          logoutBtn.style.display = "inline-flex";
-        } else {
+      
+        if (
+          id === "customerAuth" ||
+          id === "customerCode" ||
+          id === "customerReports"
+        ) {
           logoutBtn.style.display = "none";
+        } else {
+          logoutBtn.style.display = "inline-flex";
         }
+      
       }
 
       if (id === "customerReports") {
